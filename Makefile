@@ -1,4 +1,4 @@
-all: go rust binlog
+all: go rust binlog c++
 
 go:
 	./generate-go.sh
@@ -8,3 +8,7 @@ rust:
 
 binlog:
 	./generate-binlog.sh
+
+c++:
+	./generate-cpp.sh
+	rm -rf build_cpp && mkdir build_cpp && cd build_cpp && cmake ../cpp && make && cd .. && rm -rf build_cpp

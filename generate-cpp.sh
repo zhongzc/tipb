@@ -23,5 +23,4 @@ echo "generate cpp code..."
 protoc --cpp_out=../cpp/tipb/ *.proto
 cd ..
 
-rm -rf proto-cpp
-
+rm -rf proto-cpp && rm -rf build_cpp && mkdir build_cpp && cd build_cpp && cmake ../cpp && make && cd .. && rm -rf build_cpp

@@ -7,11 +7,11 @@ cp proto/* proto-cpp/
 
 function sed_inplace()
 {
-        if [ `uname` == "Darwin" ]; then
-                sed -i '' "$@"
-        else
-                sed -i "$@"
-        fi
+    if [ `uname` == "Darwin" ]; then
+        sed -i '' "$@"
+    else
+        sed -i "$@"
+    fi
 }
 
 sed_inplace '/gogo.proto/d' proto-cpp/*

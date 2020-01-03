@@ -50,9 +50,11 @@
 		Row
 		Error
 		SelectResponse
+		DAGResponseNonCacheablePartial
 		Chunk
 		RowMeta
 		DAGRequest
+		DAGRequestNonCacheablePartial
 		ChunkMemoryLayout
 		StreamResponse
 */

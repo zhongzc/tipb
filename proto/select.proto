@@ -41,10 +41,9 @@ message SelectResponse {
 	// optional bytes row_batch_data = 7 [(gogoproto.customtype) = "github.com/pingcap/tipb/sharedbytes.SharedBytes", (gogoproto.nullable) = false];
 	reserved 7;
 
-	// Not used any more. See `DAGResponseNonCacheablePartial`.
+	// Deprecated. Only exists to be compatible. Has been moved to `DAGResponseNonCacheablePartial`.
 	// The execution summary of each executor, in the order in request.
-	// repeated ExecutorExecutionSummary execution_summaries = 8;
-	reserved 8;
+	repeated ExecutorExecutionSummary execution_summaries_fallback = 8;
 
 	// It indicates the encode type of response.
 	optional EncodeType encode_type = 9 [(gogoproto.nullable) = false];

@@ -35,10 +35,18 @@ message Executor {
 	optional Aggregation stream_agg= 8;
 }
 
+enum DbType {
+	DbOther = 0;
+	DbTpcc = 1;
+	DbSysbench = 2;
+}
+
 message TableScan {
 	optional int64 table_id = 1 [(gogoproto.nullable) = false];
 	repeated ColumnInfo columns = 2;
 	optional bool desc = 3 [(gogoproto.nullable) = false];
+	optional DbType db = 4 [(gogoproto.nullable) = false];
+	repeated int64 column_ids = 5;
 }
 
 message IndexScan {
@@ -47,6 +55,8 @@ message IndexScan {
 	repeated ColumnInfo columns = 3;
 	optional bool desc = 4 [(gogoproto.nullable) = false];
 	optional bool unique = 5; // check whether it is a unique index.
+	optional DbType db = 6 [(gogoproto.nullable) = false];
+	repeated int64 column_ids = 7;
 }
 
 message Selection {

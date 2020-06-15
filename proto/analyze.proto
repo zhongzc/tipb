@@ -38,6 +38,8 @@ message AnalyzeIndexReq {
     optional int32 cmsketch_depth = 3;
 
     optional int32 cmsketch_width = 4;
+
+    repeated ColumnInfo columns_info = 5;
 }
 
 message AnalyzeColumnsReq {

@@ -37,6 +37,8 @@ message AnalyzeIndexReq {
     optional int32 cmsketch_depth = 3;
 
     optional int32 cmsketch_width = 4;
+
+    optional int32 top_n_size = 5;
 }
 
 message AnalyzeColumnsReq {

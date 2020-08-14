@@ -12,11 +12,26 @@ option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 
 enum Event {
-	Unknown = 0;
-	TiKvCoprGetRequest = 1000;
-	TiKvCoprHandleRequest = 1001;
-	TiKvCoprScheduleTask = 1002;
-	TiKvCoprGetSnapshot = 1003;
-	TiKvCoprExecuteDagRunner = 1004;
-	TiKvCoprExecuteBatchDagRunner = 1005;
-};
+  Unknown = 0;
+
+  // Coprocessor
+  TiKvCoprocessor = 1000;
+
+  // RawGet
+  TiKvRawGet = 1100;
+}
+
+message Property {
+  enum Key {
+    Unknown = 0;
+
+    // Coprocessor
+    Foo = 1000;
+
+    // RawGet
+    Bar = 1100;
+  }
+
+  required Key key = 1;
+  required string value = 2;
+}

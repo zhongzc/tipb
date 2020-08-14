@@ -11,7 +11,7 @@ option (gogoproto.marshaler_all) = true;
 option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 
-enum Event {
+enum TracingEvent {
   Unknown = 0;
 
   // Coprocessor
@@ -21,7 +21,7 @@ enum Event {
   TiKvRawGet = 1100;
 }
 
-message Property {
+message TracingProperty {
   enum Key {
     Unknown = 0;
 

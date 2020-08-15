@@ -16,6 +16,7 @@ enum TracingEvent {
 
   TiKvSnapshot = 500;
   TiKvCollectMetrics = 501;
+  TiKvGrpcio = 502;
 
   // Coprocessor
   TiKvCoprocessor = 1000;

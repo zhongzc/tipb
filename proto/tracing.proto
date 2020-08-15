@@ -14,11 +14,14 @@ option (gogoproto.unmarshaler_all) = true;
 enum TracingEvent {
   Unknown = 0;
 
+  TiKvSnapshot = 500;
+
   // Coprocessor
   TiKvCoprocessor = 1000;
 
   // RawGet
   TiKvRawGet = 1100;
+  TiKvRawGetTask = 1101;
 }
 
 message TracingProperty {

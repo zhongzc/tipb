@@ -14,9 +14,10 @@ option (gogoproto.unmarshaler_all) = true;
 enum TracingEvent {
   Unknown = 0;
 
-  TiKvSnapshot = 500;
-  TiKvCollectMetrics = 501;
-  TiKvGrpcio = 502;
+  TiKvGrpcio = 500;
+  TiKvSnapshot = 501;
+  TiKvTlsEngine = 502;
+  TiKvCollectMetrics = 503;
 
   // Coprocessor
   TiKvCoprocessor = 1000;

@@ -38,7 +38,14 @@ enum TracingEvent {
   TiKvEngineDeleteRange = 1207;
   TiKvRaftKvAsyncWrite = 1208;
   TiKvRaftKvExecWriteRequests = 1209;
-  TiKvRaftStoreSendCommandTxnExtra = 1210;
+  TiKvRaftKvExecWriteRequestsCallback= 1216;
+
+  TiKvRaftStoreOnWriteResult = 1210;
+  TiKvRaftStoreFsmPeerHandleMsg = 1211;
+  TiKvRaftStoreSendCommandTxnExtra = 1212;
+  TiKvRaftStoreRaftCommand= 1213;
+  TiKvRaftStoreProposeBatchRaftCommand= 1214;
+  TiKvRaftStoreProposeRaftCommand= 1215;
 }
 
 message TracingProperty {

@@ -26,6 +26,19 @@ enum TracingEvent {
   TiKvRawGet = 1100;
   TiKvRawGetTask = 1101;
   TiKvRawGetKeyValue = 1102;
+
+  // Async_write
+  TiKvScheduleWriteTask = 1200;
+  TiKvEngineRunner = 1201;
+  TiKvRawDelete = 1202;
+  TiKvEngineDelete = 1203;
+  TiKvRawPut = 1204;
+  TiKvEnginePut = 1205;
+  TiKvRawDeleteRange = 1206;
+  TiKvEngineDeleteRange = 1207;
+  TiKvRaftKvAsyncWrite = 1208;
+  TiKvRaftKvExecWriteRequests = 1209;
+  TiKvRaftStoreSendCommandTxnExtra = 1210;
 }
 
 message TracingProperty {

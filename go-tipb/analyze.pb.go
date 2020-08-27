@@ -12,7 +12,7 @@
 		metadata.proto
 		schema.proto
 		select.proto
-		trace.proto
+		tracing.proto
 
 	It has these top-level messages:
 		AnalyzeReq
@@ -58,6 +58,7 @@
 		ChunkMemoryLayout
 		UserIdentity
 		StreamResponse
+		TracingProperty
 */
 package tipb
 

@@ -22,6 +22,7 @@ enum TracingEvent {
   // Coprocessor
   TiKvCoprocessor = 1000;
   TiKvCoprScheduleTask = 1001;
+  TiKvCoprParseRequest = 1002;
 
   // RawGet
   TiKvRawGet = 1100;

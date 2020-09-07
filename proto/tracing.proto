@@ -25,7 +25,7 @@ enum TracingEvent {
   TiKvCoprParseRequest = 1002;
   TiKvCoprGetSnapshot = 1003;
   TiKvCoprHandleRequest = 1004;
-  TiKVCoprHandleRequestReschedule = 1005;
+  TiKvCoprHandleRequestReschedule = 1005;
 
   // RawGet
   TiKvRawGet = 1100;

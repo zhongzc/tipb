@@ -14,6 +14,7 @@ option (gogoproto.unmarshaler_all) = true;
 enum TracingEvent {
   Unknown = 0;
 
+  TiKvGrpcioPending = 499;
   TiKvGrpcio = 500;
   TiKvSnapshot = 501;
   TiKvTlsEngine = 502;
@@ -21,7 +22,7 @@ enum TracingEvent {
 
   // Coprocessor
   TiKvCoprocessor = 1000;
-  TiKvCoprScheduleTask = 1001;
+  TiKvCoprTaskPending = 1001;
   TiKvCoprParseRequest = 1002;
   TiKvCoprGetSnapshot = 1003;
   TiKvCoprHandleRequest = 1004;
@@ -44,7 +45,13 @@ enum TracingEvent {
   TiKvEngineDeleteRange = 1207;
   TiKvRaftKvAsyncWrite = 1208;
   TiKvRaftKvExecWriteRequests = 1209;
-  TiKvRaftKvExecWriteRequestsCallback= 1216;
+  TiKvRaftKvExecWriteRequestsCallback = 1216;
+  TiKvHandlePeerRaftMessage = 1217;
+  TiKvHandlePeerRaftCommand = 1218;
+  TiKvStoreMessageDispatching = 1219;
+  TiKvPeerMessageDispatching = 1220;
+  TiKvCallbackPending = 1221;
+  TiKvHandleStoreRaftMessage = 1222;
 
   TiKvRaftStoreOnWriteResult = 1210;
   TiKvRaftStoreFsmPeerHandleMsg = 1211;
@@ -52,6 +59,17 @@ enum TracingEvent {
   TiKvRaftStoreRaftCommand= 1213;
   TiKvRaftStoreProposeBatchRaftCommand= 1214;
   TiKvRaftStoreProposeRaftCommand= 1215;
+
+  TiKvPrewrite = 1300;
+  TiKvCommit = 1301;
+  TiKvGet = 1302;
+  TiKvScan = 1303;
+  TiKvPessimisticLock = 1304;
+  TiKvPessimisticRollback = 1305;
+  TiKvCleanup = 1306;
+  TiKvBatchGet = 1307;
+  TiKvBatchRollback = 1308;
+  TiKvGc = 1309;
 }
 
 message TracingProperty {

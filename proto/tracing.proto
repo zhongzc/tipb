@@ -19,6 +19,7 @@ enum TracingEvent {
   TiKvSnapshot = 501;
   TiKvTlsEngine = 502;
   TiKvCollectMetrics = 503;
+  TiKvProposeReadRaftCommand = 504;
 
   // Coprocessor
   TiKvCoprocessor = 1000;
@@ -71,6 +72,14 @@ enum TracingEvent {
   TiKvBatchRollback = 1308;
   TiKvGc = 1309;
   TiKvScanLock = 1310;
+
+  // Transcation
+  TiKvTxnTaskDispatching = 1400;
+  TiKvTxnGetSnapShot = 1401;
+  TiKvTxnProcessPending = 1402;
+  TiKvTxnProcessing = 1403;
+  TiKvTxnProcessWrite = 1404;
+  TiKvMvccPrewriteMutation = 1405;
 }
 
 message TracingProperty {

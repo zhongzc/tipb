@@ -70,6 +70,7 @@ enum TracingEvent {
   TiKvBatchGet = 1307;
   TiKvBatchRollback = 1308;
   TiKvGc = 1309;
+  TiKvScanLock = 1310;
 }
 
 message TracingProperty {

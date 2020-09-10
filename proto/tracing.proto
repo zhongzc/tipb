@@ -32,7 +32,11 @@ enum TracingEvent {
   TiKvCoprLimitExecutorNextBatch = 1008;
   TiKvCoprTableScanExecutorNextBatch = 1010;
   TiKvCoprIndexScanExecutorNextBatch = 1011;
-  TiKvCoprTopNScanExecutorNextBatch = 1012;
+  TiKvCoprTopNExecutorNextBatch = 1012;
+  TiKvCoprStreamAggrExecutorNextBatch = 1013;
+  TiKvCoprFastHashAggrExecutorNextBatch = 1014;
+  TiKvCoprSimpleAggrExecutorNextBatch = 1015;
+  TiKvCoprSlowHashAggrExecutorNextBatch = 1016;
 
   // RawGet
   TiKvRawGet = 1100;

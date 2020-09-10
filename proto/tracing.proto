@@ -28,7 +28,11 @@ enum TracingEvent {
   TiKvCoprGetSnapshot = 1003;
   TiKvCoprHandleRequest = 1004;
   TiKvCoprHandleRequestReschedule = 1005;
-  TiKvCoprExecutorNextBatch = 1006;
+  TiKvCoprSelectionExecutorNextBatch = 1007;
+  TiKvCoprLimitExecutorNextBatch = 1008;
+  TiKvCoprTableScanExecutorNextBatch = 1010;
+  TiKvCoprIndexScanExecutorNextBatch = 1011;
+  TiKvCoprTopNScanExecutorNextBatch = 1012;
 
   // RawGet
   TiKvRawGet = 1100;

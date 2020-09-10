@@ -28,15 +28,15 @@ enum TracingEvent {
   TiKvCoprGetSnapshot = 1003;
   TiKvCoprHandleRequest = 1004;
   TiKvCoprHandleRequestReschedule = 1005;
-  TiKvCoprSelectionExecutorNextBatch = 1007;
-  TiKvCoprLimitExecutorNextBatch = 1008;
-  TiKvCoprTableScanExecutorNextBatch = 1010;
-  TiKvCoprIndexScanExecutorNextBatch = 1011;
-  TiKvCoprTopNExecutorNextBatch = 1012;
-  TiKvCoprStreamAggrExecutorNextBatch = 1013;
-  TiKvCoprFastHashAggrExecutorNextBatch = 1014;
-  TiKvCoprSimpleAggrExecutorNextBatch = 1015;
-  TiKvCoprSlowHashAggrExecutorNextBatch = 1016;
+  TiKvCoprSelectionExecutorNextBatch = 1006;
+  TiKvCoprLimitExecutorNextBatch = 1007;
+  TiKvCoprTableScanExecutorNextBatch = 1009;
+  TiKvCoprIndexScanExecutorNextBatch = 1010;
+  TiKvCoprTopNExecutorNextBatch = 1011;
+  TiKvCoprStreamAggrExecutorNextBatch = 1012;
+  TiKvCoprFastHashAggrExecutorNextBatch = 1013;
+  TiKvCoprSimpleAggrExecutorNextBatch = 1014;
+  TiKvCoprSlowHashAggrExecutorNextBatch = 1015;
 
   // RawGet
   TiKvRawGet = 1100;

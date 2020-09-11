@@ -131,11 +131,16 @@ enum TracingEvent {
   // Transcation
   TiKvTxnTaskDispatching = 1400;
   TiKvTxnGetSnapShot = 1401;
+  TiKvTxnProcess = 1403;
   TiKvTxnProcessPending = 1402;
-  TiKvTxnProcessing = 1403;
+  TiKvTxnProcessRead = 1411;
   TiKvTxnProcessWrite = 1404;
   TiKvMvccPrewriteMutation = 1405;
-  TiKvTransactionTask = 1406;
+  TiKvTxnFinishWithErr = 1407;
+  TiKvTxnOnReadFinished = 1408;
+  TiKvTxnOnWriteFinished = 1409;
+  TiKvTxnOnWaitForLock = 1410;
+  TiKvTxnOnPipelinedWrite = 1412;
 }
 
 message TracingProperty {

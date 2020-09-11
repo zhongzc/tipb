@@ -20,6 +20,8 @@ enum TracingEvent {
   TiKvTlsEngine = 502;
   TiKvCollectMetrics = 503;
   TiKvProposeReadRaftCommand = 504;
+  TiKvPeerMessage = 505;
+  TiKvStoreMessage = 506;
 
   // Coprocessor
   TiKvCoprocessor = 1000;
@@ -37,20 +39,21 @@ enum TracingEvent {
   TiKvCoprFastHashAggrExecutorNextBatch = 1013;
   TiKvCoprSimpleAggrExecutorNextBatch = 1014;
   TiKvCoprSlowHashAggrExecutorNextBatch = 1015;
+  TiKvCoprocessorPending = 1016;
+  TiKvCoprocessorBuildFuture = 1017;
 
   // RawGet
   TiKvRawGet = 1100;
-  TiKvRawGetTask = 1101;
-  TiKvRawGetKeyValue = 1102;
+  TiKvRawGetPending = 1101;
+  TiKvRawGetBuildFuture = 1102;
+  TiKvRawGetTask = 1103;
+  TiKvRawGetKeyValue = 1104;
 
   // Async_write
   TiKvScheduleWriteTask = 1200;
   TiKvEngineRunner = 1201;
-  TiKvRawDelete = 1202;
   TiKvEngineDelete = 1203;
-  TiKvRawPut = 1204;
   TiKvEnginePut = 1205;
-  TiKvRawDeleteRange = 1206;
   TiKvEngineDeleteRange = 1207;
   TiKvRaftKvAsyncWrite = 1208;
   TiKvRaftKvExecWriteRequests = 1209;
@@ -62,24 +65,68 @@ enum TracingEvent {
   TiKvCallbackPending = 1221;
   TiKvHandleStoreRaftMessage = 1222;
 
+  TiKvRawPut = 1204;
+  TiKvRawPutPending = 1223;
+  TiKvRawPutBuildFuture = 1224;
+
+  TiKvRawDelete = 1202;
+  TiKvRawDeletePending = 1225;
+  TiKvRawDeleteBuildFuture = 1226;
+
+  TiKvRawDeleteRange = 1206;
+  TiKvRawDeleteRangePending = 1227;
+  TiKvRawDeleteRangeBuildFuture = 1228;
+
   TiKvRaftStoreOnWriteResult = 1210;
   TiKvRaftStoreFsmPeerHandleMsg = 1211;
   TiKvRaftStoreSendCommandTxnExtra = 1212;
   TiKvRaftStoreRaftCommand= 1213;
   TiKvRaftStoreProposeBatchRaftCommand= 1214;
   TiKvRaftStoreProposeRaftCommand= 1215;
-
+  
   TiKvPrewrite = 1300;
+  TiKvPrewritePending = 1311;
+  TiKvPrewriteBuildFuture = 1312;
+
   TiKvCommit = 1301;
+  TiKvCommitPending = 1313;
+  TiKvCommitBuildFuture = 1314;
+
   TiKvGet = 1302;
+  TiKvGetPending = 1315;
+  TiKvGetBuildFuture = 1316;
+
   TiKvScan = 1303;
-  TiKvPessimisticLock = 1304;
-  TiKvPessimisticRollback = 1305;
+  TiKvScanPending = 1317;
+  TiKvScanBuildFuture = 1318;
+
   TiKvCleanup = 1306;
+  TiKvCleanupPending = 1319;
+  TiKvCleanupBuildFuture = 1320;
+
+  TiKvPessimisticLock = 1304;
+  TiKvPessimisticLockPending = 1321;
+  TiKvPessimisticLockBuildFuture = 1322;
+
+  TiKvPessimisticRollback = 1305;
+  TiKvPessimisticRollbackPending = 1323;
+  TiKvPessimisticRollbackBuildFuture = 1324;
+
   TiKvBatchGet = 1307;
+  TiKvBatchGetPending = 1325;
+  TiKvBatchGetBuildFuture = 1326;
+
   TiKvBatchRollback = 1308;
+  TiKvBatchRollbackPending = 1327;
+  TiKvBatchRollbackBuildFuture = 1328;
+
   TiKvGc = 1309;
+  TiKvGcPending = 1329;
+  TiKvGcBuildFuture = 1330;
+
   TiKvScanLock = 1310;
+  TiKvScanLockPending = 1331;
+  TiKvScanLockBuildFuture = 1332;
 
   // Transcation
   TiKvTxnTaskDispatching = 1400;
@@ -88,6 +135,7 @@ enum TracingEvent {
   TiKvTxnProcessing = 1403;
   TiKvTxnProcessWrite = 1404;
   TiKvMvccPrewriteMutation = 1405;
+  TiKvTransactionTask = 1406;
 }
 
 message TracingProperty {

@@ -84,7 +84,8 @@ enum TracingEvent {
   TiKvRaftStoreProposeRaftCommand= 1214;
   TiKvRaftStoreRaftRouterSendCommand= 1215;
   TiKvRaftStorePeerFsmHandleMessage = 1229;
-  TiKvRaftStoreScheduleTick = 1413;
+  TiKvRaftStoreScheduleTickPending = 1413;
+  TiKvRaftStoreScheduleTick = 1414;
   
   TiKvPrewrite = 1300;
   TiKvPrewritePending = 1311;
